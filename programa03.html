@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de pontuação</title>
 </head>
+
 <body>
-    <script></script>
+    <script>
+        function pulalinha() {
+            document.write('<br>')
+        }
+
+
+        function mostrar(texto) {
+            document.write(texto)
+            pulalinha()
+        }
+
+        const medalhasdeouro = prompt('Quantas medalhas de ouro você ganhou?')
+        const medalhasdeprata = prompt('Quantas medalhas de prata você ganhou?')
+        const medalhasdebronze = prompt('Quantas medalhas de bronze?')
+        const provascorridas = prompt('Quantas provas você correu?')
+
+        let pontos = (medalhasdeouro * 5) + (medalhasdeprata * 3) + (medalhasdebronze * 2) + parseInt(provascorridas)
+
+        mostrar(` O total de pontos que vc fez nessa temporada foi de : ${pontos}`)
+
+        if (pontos > 30) {
+            mostrar('Você conquistou o troféu de primeiro lugar. Não fez nada a mais que sua obrigação')
+        } else if (pontos == 30) {
+            mostrar('Você consquitou nada, desista, o segundo lugar é horrivel')
+        } else if (pontos < 30 && pontos > 25){
+            mostrar('Você é melhor que o segundo, 3 lugar!')
+        } else{
+            mostrar('Não foi dessa vez, e muito provavalemente não será na proxima, adeus.')
+        }
+
+
+
+    </script>
 </body>
+
 </html>
