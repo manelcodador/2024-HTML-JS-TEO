@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de média</title>
+</head>
+
+<body>
+    <script>
+        function pulalinha() {
+            document.write('<br>')
+        }
+
+        function mostrar(texto) {
+            document.write(texto)
+            pulalinha()
+        }
+
+        let materia = prompt('qual diciplica voce quer saber a media?')
+
+        let trimestres = prompt(`quantos trimestres voce ja fez de ${materia}?`)
+
+        let totalNotas = 0
+
+        for (let i = 1; i <= trimestres; i++) {
+            let nota = parseInt(prompt(`qual sua nota no ${i}º trimestre`))
+            totalNotas = totalNotas + nota
+
+        }
+
+        let media = totalNotas / trimestres
+        mostrar(`sua média até o momento é: ${nota}`)
+
+    </script>
+</body>
+
+</html>
