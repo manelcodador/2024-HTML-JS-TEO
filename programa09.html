@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programa09</title>
+</head>
+
+<body>
+    <script>
+
+        function pulalinha() {
+            document.write('<br>')
+        }
+
+        function mostrar(texto) {
+            document.write(texto)
+            pulalinha()
+        }
+        let numeroPensado = Math.round(Math.random() * 10)
+
+        let tentartiva = 1;
+
+        while (tentartiva <= 3) {
+            let chute = parseInt(prompt('Digite um número de 0 á 10'))
+
+            if (numeroPensado == chute) {
+                mostrar('voce acertou')
+                break
+            } else {
+                mostrar('voce errou, morra')
+            }
+
+            tentartiva = tentartiva + 1
+        }
+        mostrar(`voce nao tem mais tentativas, o numero pensado era ${numeroPensado}`)
+
+    </script>
+</body>
+
+</html>
