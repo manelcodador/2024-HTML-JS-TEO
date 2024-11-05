@@ -1,61 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-:root {
-    --fonte-titulo: "Arima", system-ui;
+:root{
+    --fonte-titulo: "Lora", serif;
     --fonte-texto: "Arima", system-ui;
-    --cor1: #003049ff;
-    --cor2: #d62828ff;
-    --cor3: #f77f00ff;
-    --cor4: #fcbf49ff;
-    --cor5: #eae2b7ff;
+    --preto: #000000ff;
+    --azul-forte: #14213dff;
+    --laranja-claro: #fca311ff;
+    --bege: #e5e5e5ff;
+    --branco: #ffffffff;
+    --meiopreto: #03071eff;
+    --vermelhoescuro: #370617ff;
+    --meioescuro: #6a040fff;
+    --vermelho: #9d0208ff;
 }
 
-body {
-    background-color: var(--cor5);
+body{
+    background-color: var(--meiopreto);
     font-family: var(--fonte-texto);
 }
-
-header,
-footer {
-    background-color: var(--cor3);
+header, footer{
+    background-color: var(--meiopreto);
     text-align: center;
     padding: 2em;
-    color: var(--cor4);
+    color: var(--laranja-claro)
 }
-
-header h1 {
+header h1{
     font-family: var(--fonte-titulo);
-    font-size: 2.5em;
-}
-
-.projetos {
+    font-size: 2.5em;}
+.projetos{
     padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.cartao {
+.cartao{
     text-align: center;
-    background-color: var(--cor2);
+    background-color: var(--azul-forte);
     width: 100%;
     margin: 1em 0;
-    color: var(--fonte-texto);
+    color: var(--laranja-claro);
     padding: 1em 0;
 }
-
-.cartao a {
-    text-decoration: none;
-    color: var(--cor3);
+.cartao:hover{
+    background-color: var(--branco);
 
 }
-
-footer a {
+.cartao a{
     text-decoration: none;
-    color: var(--cor2);
+    color: var(--vermelho);
+    
+}
+.ultimo-cartao{
+    margin-bottom: 5em;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a{
+    text-decoration: none;
+    color: var(--bege);
+}
+.principal-numero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.numero-input{
+    font-size: 1.5em;
+    padding: 1em;
+    border-radius: 15px;
+}
+.numero-botao{
+    margin-left: 1em;
+    font-size: 1.5em;
+    padding: 1em;
+    background-color: var(--laranja-claro);
+    border-radius: 15px;
 }
